@@ -1,0 +1,116 @@
+---
+title: "semana 14"
+author: "juan diegos olorsano santos"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+#importar la data con la que se va a trabajar
+
+```{r}
+data<- read_csv("C:/Users/WINDOWS 2024/Downloads/s13_hemodialisis.csv")
+
+```
+
+#ver las 6 primeras filas
+
+```{r}
+head(data)
+
+```
+
+#estructutra de la data
+
+```{r}
+str(data)
+
+```
+
+#medidda de tendencia central #media aritmetica
+
+```{r}
+mean(data $ talla)
+mean(data $ plaquetas)
+```
+
+#MEDIANA
+
+```{r}
+median(data$Talla)
+median(data$Plaquetas)
+```
+
+#MODA PLAQUETAS
+
+```{r}
+mode_edad<- names(sort(table(data$Plaquetas),decreasing = TRUE))
+
+```
+
+#MEDIDAS DE DISPERSION #VARIANZA
+
+```{r}
+var(data$Talla,na.rm = TRUE)
+var(data$Plaquetas,na.rm = TRUE)
+```
+
+#DESVIACION ESTANDAR
+
+```{r}
+sd(data$Talla,na.rm = TRUE)
+sd(data$Plaquetas,na.rm = TRUE)
+```
+
+#RANGO
+
+```{r}
+range(data$Talla,na.rm = TRUE)
+range(data$Plaquetas,na.rm = TRUE)
+```
+
+#RANGO INTERCUARTILICO
+
+```{r}
+IQR(data$Talla,na.rm = TRUE)
+IQR(data$Plaquetas,na.rm = TRUE)
+```
+
+#MEDIDAS DE POSICION
+
+```{r}
+quantile(data$Talla,probs = c(0.25,0.5,0.75,0.90),na.rm = TRUE)
+quantile(data$Plaquetas,probs = c(0.25,0.5,0.75,0.90),na.rm = TRUE)
+```
+
+#RESUMEN
+
+```{r}
+summary(data$Talla)
+summary(data$Plaquetas)
+```
+
+#RESUMEN DE TODAS LAS VARIABLES
+
+```{r}
+summary(data)
+
+```
+
+#VISUALIZACION GRAFICA #HISTOGRAMA
+
+```{r}
+ggplot(data,aes(x=Talla))+geom_histogram(bins = 30)+theme_minimal()
+ggplot(data,aes(x=Plaquetas))+geom_histogram(bins = 30)+theme_minimal()
+```
