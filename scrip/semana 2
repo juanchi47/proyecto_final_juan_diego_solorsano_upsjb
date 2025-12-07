@@ -1,0 +1,26 @@
+---
+title: "Untitledsolorsano_santos_juan_diego"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Para crear un proyecto en Rstudio:
+
+1.  Entramos a Rstudio y en la parte superior derecha, encontraremos la opción Project: (None). Hacemos click en esa opción, y luego, click en New Project…
+
+    ![](images/Captura de pantalla 2025-12-06 135220.png)
+
+2.  Aparecerá una ventana emergente, hacemos click a la opción New Directory, luego click en New Project. Añadimos nuestro nombre.
+
+    ![](images/clipboard-2039054604.png)
+
+3.  Usamos la opción Browse para guardar el proyecto en una localización fácilmente accesible. Sugerido, en el directorio de Documentos (de nuestra computadora). Después de seleccionar la carpeta, hacemos click en Create Project.
+
+    ![](images/clipboard-270779756.png)
+
+4.  ¡Listo! Hemos creado un proyecto en RStudio
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
